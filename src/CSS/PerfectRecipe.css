@@ -1,0 +1,94 @@
+.perfectrecipe-container {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.perfectrecipe-content {
+  margin-top: 15vmin;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perfectrecipe-content h1 {
+  color: rebeccapurple;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.perfectrecipe-content h2 {
+  color: #5a2d82;
+  font-size: 1.8rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.perfectrecipe-content p {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.perfectrecipe-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.perfectrecipe-content li {
+  background: #e0e0e0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.perfectrecipe-content li strong {
+  color: rebeccapurple;
+}
+
+@media (max-width: 600px) {
+  .perfectrecipe-container {
+    padding: 10px;
+  }
+
+  .perfectrecipe-content {
+    padding: 15px;
+  }
+
+  .perfectrecipe-content h1 {
+    font-size: 2rem;
+  }
+
+  .perfectrecipe-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .perfectrecipe-content p {
+    font-size: 0.9rem;
+  }
+}
+
+.tech-section {
+  margin-top: 30px;
+}
+
+.tech-section h2 {
+  color: #4a4a4a;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.tech-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tech-section ul li {
+  background-color: #e0e0e0;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}

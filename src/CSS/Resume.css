@@ -1,0 +1,174 @@
+/* Resume.css */
+.resume-page-container {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.resume-header h1 {
+  font-size: 2.5rem;
+  color: #4a4a4a;
+}
+
+.resume-header p {
+  font-size: 1.2rem;
+  color: #6a6a6a;
+}
+
+.resume-header ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.resume-header ul li {
+  display: inline;
+  margin: 0 15px;
+  font-size: 1rem;
+}
+
+.resume-header ul li a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.resume-profile-summary,
+.resume-skills,
+.resume-experience,
+.resume-projects,
+.resume-education,
+.resume-certifications,
+.resume-volunteer,
+.resume-languages,
+.resume-interests {
+  margin-bottom: 40px;
+}
+
+.resume-profile-summary h2,
+.resume-skills h2,
+.resume-experience h2,
+.resume-projects h2,
+.resume-education h2,
+.resume-certifications h2,
+.resume-volunteer h2,
+.resume-languages h2,
+.resume-interests h2 {
+  font-size: 1.8rem;
+  color: #333333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 5px;
+}
+
+.resume-profile-summary p,
+.resume-skills ul li,
+.resume-experience ul li,
+.resume-projects ul li,
+.resume-certifications ul li,
+.resume-volunteer p,
+.resume-languages p,
+.resume-interests p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666666;
+}
+
+.resume-skills ul,
+.resume-experience ul,
+.resume-projects ul,
+.resume-certifications ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.resume-skills ul li,
+.resume-experience ul li,
+.resume-projects ul li,
+.resume-certifications ul li {
+  background: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.resume-skills ul li strong,
+.resume-experience ul li strong,
+.resume-projects ul li strong,
+.resume-certifications ul li strong {
+  color: #0066cc;
+}
+
+.resume-job h3,
+.resume-project h3 {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+  margin-bottom: 5px;
+}
+
+.resume-job ul,
+.resume-project ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.resume-education h3 {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+  margin-bottom: 5px;
+}
+
+.resume-education p {
+  font-size: 1rem;
+  color: #666666;
+}
+
+@media (max-width: 768px) {
+  .resume-page-container {
+    padding: 10px;
+  }
+
+  .resume-header h1 {
+    font-size: 2rem;
+  }
+
+  .resume-header p {
+    font-size: 1rem;
+  }
+
+  .resume-header ul li {
+    margin: 0 10px;
+  }
+
+  .resume-profile-summary h2,
+  .resume-skills h2,
+  .resume-experience h2,
+  .resume-projects h2,
+  .resume-education h2,
+  .resume-certifications h2,
+  .resume-volunteer h2,
+  .resume-languages h2,
+  .resume-interests h2 {
+    font-size: 1.5rem;
+  }
+
+  .resume-profile-summary p,
+  .resume-skills ul li,
+  .resume-experience ul li,
+  .resume-projects ul li,
+  .resume-certifications ul li,
+  .resume-volunteer p,
+  .resume-languages p,
+  .resume-interests p {
+    font-size: 0.9rem;
+  }
+}
