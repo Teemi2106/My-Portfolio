@@ -43,7 +43,7 @@ const Resume = () => {
           </li>
           <li>
             <strong>Frameworks:</strong> React (Advanced), Node.js
-            (Intermediate)
+            (Intermediate), Flask (Beginner)
           </li>
           <li>
             <strong>Tools:</strong> Git (Advanced), Firebase (Intermediate)
