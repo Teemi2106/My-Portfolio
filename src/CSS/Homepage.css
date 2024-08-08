@@ -134,12 +134,12 @@ body {
 
 /* Front image */
 #profileImageFront {
-  background-image: url("../Assets/splash.png");
+  background-image: url("../Assets/logo.png");
 }
 
 /* Back image */
 #profileImageBack {
-  background-image: url("../Assets/logo.png");
+  background-image: url("../Assets/smallLogo.png");
   transform: rotateY(180deg);
 }
 
