@@ -10,7 +10,7 @@ import Contact from "../Components/Contact";
 
 const Homepage = () => {
   const [text] = useTypewriter({
-    words: ["Front-End Developer", "Mobile App Developer", "Data Analyst"],
+    words: ["Front-End Developer", "Mobile App Developer", "Data Scientist"],
     loop: 0,
   });
 
