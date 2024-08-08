@@ -51,7 +51,10 @@ const Homepage = () => {
               experiences.
             </p>
           </div>
-          <div id="profileImage"></div>
+          <div id="profileContainer">
+            <div id="profileImageFront"></div>
+            <div id="profileImageBack"></div>
+          </div>
         </section>
 
         <section id="expertiseSection" className="reveal2">
