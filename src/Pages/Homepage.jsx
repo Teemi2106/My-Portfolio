@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "../CSS/Homepage.css";
 import design from "../Assets/undraw_Designer_re_5v95.png";
 import engineering from "../Assets/undraw_Code_review_re_woeb.png";
-import problemSolving from "../Assets/undraw_Problem_solving_re_4gq3.png"; // Add path to problem solving image
+import problemSolving from "../Assets/undraw_Problem_solving_re_4gq3.png";
 import { useTypewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
 import Header from "../Components/Header";
@@ -10,7 +10,7 @@ import Contact from "../Components/Contact";
 
 const Homepage = () => {
   const [text] = useTypewriter({
-    words: ["Front-End Developer", "Mobile App Developer"],
+    words: ["Front-End Developer", "Mobile App Developer", "Data Analyst"],
     loop: 0,
   });
 

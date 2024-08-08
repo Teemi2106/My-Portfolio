@@ -6,7 +6,7 @@ const Resume = () => {
     <div className="resume-page-container">
       <header className="resume-header">
         <h1>Timi Gbenga</h1>
-        <p>Front-End Developer | React & Node.js | Data Analyst | Python</p>
+        <p>Front-End Developer | React & Node.js | Data Scientist | Python</p>
         <ul>
           <li>Email: gbengatimi166@gmail.com</li>
           <li>Phone: +234 704-346-4244</li>
@@ -46,8 +46,10 @@ const Resume = () => {
             (Intermediate), Flask (Beginner)
           </li>
           <li>
-            <strong>Tools:</strong> Git (Advanced), Firebase (Intermediate)
+            <strong>Tools:</strong> Git (Advanced), Firebase (Intermediate),
+            TensorFlow (Intermediate), Keras, TensorBoard, NumPy, Pandas
           </li>
+
           <li>
             <strong>Soft Skills:</strong> Team Leadership, Effective
             Communication, Problem-Solving
@@ -55,7 +57,7 @@ const Resume = () => {
           <li>
             <strong>Others:</strong> Performance Optimization, Performance
             Optimization, Problem-Solving, Responsive Web Design, UX
-            Design/Strategy
+            Design/Strategy,
           </li>
         </ul>
       </section>

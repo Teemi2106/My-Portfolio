@@ -40,7 +40,7 @@ const Contact = () => {
         </div>
         <div>
           <button type="submit" id="submitMsg" className="button">
-            Apply Now
+            Message Me
             <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
               <path
                 clipRule="evenodd"

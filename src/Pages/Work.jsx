@@ -7,6 +7,7 @@ import splash from "../Assets/splash.png";
 import happyBlogger from "../Assets/happyBlogger.png";
 import { useNavigate } from "react-router-dom";
 import pic from "../Assets/undraw_Project_completed_re_jr7u-removebg-preview.png";
+import Contact from "../Components/Contact";
 
 const Work = () => {
   const navigate = useNavigate();
@@ -73,6 +74,7 @@ const Work = () => {
           </a>
         </div>
       </section>
+      <Contact />
     </div>
   );
 };
