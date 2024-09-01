@@ -25,7 +25,7 @@ const Work = () => {
       <section id="workSection1">
         <h1>My Projects</h1>
         <img src={pic} alt="pic" style={{ width: "45vmin" }} />
-        <h2 style={{ fontWeight: "lighter" }}>
+        <h2 style={{ fontWeight: "lighter", padding: "2vmin" }}>
           A showcase of my past projects and accomplishments.
         </h2>
       </section>
