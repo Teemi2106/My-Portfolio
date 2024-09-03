@@ -20,7 +20,13 @@ const Work = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "aliceblue", minHeight: "100vh" }}>
+    <div
+      style={{
+        background: "linear-gradient(to right, rgb(7, 7, 112), black)",
+        minHeight: "100vh",
+        paddingBottom: "5vmin",
+      }}
+    >
       <Header />
       <section id="workSection1">
         <h1>My Projects</h1>
@@ -67,11 +73,24 @@ const Work = () => {
           </a>
         </div>
         <div id="project">
-          <img src={splash} alt="Splash Project" id="project-img" />
-          <h3 id="project-title">Splash</h3>
-          <a href="/" target="_blank" rel="noopener noreferrer">
-            Website
-          </a>
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7236460994196090882?compact=1"
+            height="300"
+            width="350"
+            frameborder="0"
+            allowfullscreen=""
+            title="Embedded post"
+          ></iframe>
+        </div>
+        <div id="project">
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7230562011368112129?compact=1"
+            height="300"
+            width="750"
+            frameborder="0"
+            allowfullscreen=""
+            title="Embedded post"
+          ></iframe>
         </div>
       </section>
       <Contact />

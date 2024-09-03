@@ -18,7 +18,7 @@
   position: absolute;
   height: 4px;
   width: 100%;
-  background: black;
+  background: #fff;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -67,7 +67,7 @@
   z-index: 1000;
   width: 40vmin;
   backdrop-filter: blur(15px);
-  background-color: rgba(251, 255, 255, 0.555);
+  background-color: rgba(0, 2, 14, 0.555);
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform: translateY(10px);
   opacity: 0;
@@ -94,7 +94,7 @@
 #dropdownMenu li {
   padding: 10px;
   border-bottom: 1px solid #ddd;
-  color: rgb(75, 13, 219);
+  color: rgb(221, 220, 238);
   font-weight: 700;
 }
 
@@ -105,6 +105,7 @@
 
 #dropdownMenu li:hover {
   background-color: #f0f0f0;
+  color: black;
 }
 
 #dropdownMenu li:last-child {

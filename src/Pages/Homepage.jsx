@@ -39,7 +39,7 @@ const Homepage = () => {
   }, []);
 
   return (
-    <main>
+    <main id="free">
       <Header />
       <section id="mainSection">
         <section id="heroSection">
