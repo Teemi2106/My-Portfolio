@@ -65,7 +65,7 @@ const Resume = () => {
       <section className="resume-experience">
         <h2>Experience</h2>
         <div className="resume-job">
-          <h3>Associate Developer | Triplegrace Inc. | Jul 2023 - Aug 2023</h3>
+          <h3>Web Developer | TripleG | Jul 2023 - Aug 2023</h3>
           <ul>
             <li>
               Spearheaded the redesign and optimization of the company website,
