@@ -154,14 +154,14 @@ const Resume = () => {
         </ul>
       </section>
 
-      <section className="resume-volunteer">
+      /*<section className="resume-volunteer">
         <h2>Volunteer Experience</h2>
         <h3>Tech Mentor | Tech-Hub Community | 2024 - Present</h3>
         <p>
           Mentored over 50 students in web development, providing guidance on
           best practices and career development.
         </p>
-      </section>
+      </section>*/
 
       <section className="resume-languages">
         <h2>Languages</h2>
