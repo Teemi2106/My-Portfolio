@@ -65,7 +65,7 @@ const Resume = () => {
       <section className="resume-experience">
         <h2>Experience</h2>
         <div className="resume-job">
-          <h3>Associate Developer | Triplegrace Inc. | Jul 2023 - Aug 2023</h3>
+          <h3>Web Developer | TripleG | Jul 2023 - Aug 2023</h3>
           <ul>
             <li>
               Spearheaded the redesign and optimization of the company website,
@@ -154,14 +154,7 @@ const Resume = () => {
         </ul>
       </section>
 
-      <section className="resume-volunteer">
-        <h2>Volunteer Experience</h2>
-        <h3>Tech Mentor | Tech-Hub Community | 2024 - Present</h3>
-        <p>
-          Mentored over 50 students in web development, providing guidance on
-          best practices and career development.
-        </p>
-      </section>
+ 
 
       <section className="resume-languages">
         <h2>Languages</h2>
