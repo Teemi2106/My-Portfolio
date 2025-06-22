@@ -27,11 +27,12 @@
   width: 50vmin;
   margin: 1rem;
   text-align: center;
+  cursor: pointer;
 }
 
 #project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 /* Image styling */
@@ -49,4 +50,30 @@
   color: #333;
   background-color: #f9fafb;
   margin: 0;
+}
+
+/* Project badges */
+.project-badges {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.badge {
+  background: #0a0a40;
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s;
+}
+
+.badge:hover {
+  background: #23235b;
 }
