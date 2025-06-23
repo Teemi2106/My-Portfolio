@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "../CSS/Homepage.css";
 import design from "../Assets/undraw_Designer_re_5v95.png";
 import engineering from "../Assets/undraw_Code_review_re_woeb.png";
@@ -26,6 +26,7 @@ const Homepage = () => {
     loop: 0,
   });
 
+  const canvasRef = useRef(null);
   useEffect(() => {
     const revealElements = document.querySelectorAll(
       ".reveal, .reveal2, .reveal3"
@@ -45,9 +46,51 @@ const Homepage = () => {
       }
     };
 
-    window.addEventListener("scroll", revealOnScroll);
+    // Digital Rain Effect
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
 
-    return () => window.removeEventListener("scroll", revealOnScroll);
+    canvas.width = window.innerWidth;
+    canvas.height = document.getElementById("heroSection").offsetHeight;
+
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = [];
+
+    for (let i = 0; i < columns; i++) {
+      drops[i] = 1;
+    }
+
+    const draw = () => {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#141461"; // Green text
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = String.fromCharCode(65 + Math.random() * 57);
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    };
+
+    const interval = setInterval(draw, 33);
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = document.getElementById("heroSection").offsetHeight;
+    });
+
+    return () => {
+      window.removeEventListener("scroll", revealOnScroll);
+      clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -57,7 +100,7 @@ const Homepage = () => {
         {/* Hero Section */}
         <section id="heroSection">
           <div id="intro">
-            <h1>Hello, I'm Timi Gbenga</h1>
+            <h1 className="glitch">Hello, I'm Timi Gbenga</h1>
             <h2>I'm a {text}</h2>
             <p>
               I build robust, scalable digital products with a focus on
@@ -68,8 +111,8 @@ const Homepage = () => {
             <div id="profileImageFront"></div>
             <div id="profileImageBack"></div>
           </div>
+          <canvas id="rainCanvas" ref={canvasRef}></canvas>
         </section>
-
         {/* About Section */}
         <section id="aboutSection" className="reveal2">
           <h2>About Me</h2>
@@ -79,6 +122,55 @@ const Homepage = () => {
             mobile, and data science, and I thrive on collaborating with teams
             to bring ideas to life.
           </p>
+        </section>
+
+        {/* Services Section */}
+        <section id="servicesSection" className="reveal">
+          <h2>Services</h2>
+          <div className="servicesContainer">
+            <div className="serviceCard">
+              <h3>Web Development</h3>
+              <p>
+                Responsive, modern websites and web apps using the latest
+                technologies.
+              </p>
+            </div>
+            <div className="serviceCard">
+              <h3>Mobile App Development</h3>
+              <p>
+                Cross-platform mobile apps with React Native for iOS and
+                Android, tailored to your business needs.
+              </p>
+            </div>
+            <div className="serviceCard">
+              <h3>UI/UX Design</h3>
+              <p>
+                Intuitive, user-centered design for web and mobile, focusing on
+                usability and aesthetics.
+              </p>
+            </div>
+            <div className="serviceCard">
+              <h3>Data Science & Automation</h3>
+              <p>
+                Data analysis, machine learning, and workflow automation to help
+                you make smarter decisions.
+              </p>
+            </div>
+            <div className="serviceCard">
+              <h3>Consulting</h3>
+              <p>
+                Expert advice on technology strategy, project management, and
+                software development best practices.
+              </p>
+            </div>
+            <div className="serviceCard">
+              <h3>Graphics Design</h3>
+              <p>
+                Creative graphics design services to enhance your brand's visual
+                identity and marketing materials.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Tech Stack Section */}
