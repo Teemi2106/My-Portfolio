@@ -209,7 +209,7 @@ const Homepage = () => {
   useEffect(() => {
     const h1 = document.querySelector(".glitch");
     const originalText = "Hello, I'm Timi Gbenga";
-    const glitchText = "Hello, I'm DevTeemi";
+    const glitchText = "Yo, Call me DevTeemi";
 
     h1.setAttribute("data-text", originalText); // Set initial data-text
 
@@ -379,7 +379,11 @@ const Homepage = () => {
                 <div
                   key={tech.name}
                   className="techStackItem"
-                  ref={isMobile ? undefined : (el) => (techStackRefs.current[index] = el)}
+                  ref={
+                    isMobile
+                      ? undefined
+                      : (el) => (techStackRefs.current[index] = el)
+                  }
                   style={
                     isMobile
                       ? {
