@@ -151,7 +151,7 @@ const Header = () => {
         <ul className="flex items-center gap-6 justify-between text-gray-200 font-bold">
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "heroSection" ? "active" : ""
+              activeSection === "heroSection" ? "active-nav" : ""
             }`}
             data-text="Home"
             onClick={homeClick}
@@ -160,7 +160,7 @@ const Header = () => {
           </li>
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "resume" ? "active" : ""
+              activeSection === "resume" ? "active-nav" : ""
             }`}
             data-text="Résumé"
             onClick={resumeClick}
@@ -169,7 +169,7 @@ const Header = () => {
           </li>
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "workSection" ? "active" : ""
+              activeSection === "workSection" ? "active-nav" : ""
             }`}
             data-text="My Projects"
             onClick={projectClick}
@@ -178,7 +178,7 @@ const Header = () => {
           </li>
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "servicesSection" ? "active" : ""
+              activeSection === "servicesSection" ? "active-nav" : ""
             }`}
             data-text="My Services"
             onClick={serviceClick}
@@ -187,7 +187,7 @@ const Header = () => {
           </li>
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "techStackSection" ? "active" : ""
+              activeSection === "techStackSection" ? "active-nav" : ""
             }`}
             data-text="Tech Stack"
             onClick={stackClick}
@@ -196,7 +196,7 @@ const Header = () => {
           </li>
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "techStackSection" ? "active" : ""
+              activeSection === "mainContact" ? "active-nav" : ""
             }`}
             data-text="Contact Me"
             onClick={contactClick}
@@ -231,67 +231,80 @@ const Header = () => {
       <div
         id="menuDiv"
         className="md:hidden"
-        onClick={toggleMenu}
         aria-label="Toggle menu"
       >
-        <div className={`burger ${menuOpen ? "open" : ""}`}>
+        <div className={`burger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
         </div>
         {menuOpen && (
-          <nav id="dropdownMenu">
-            <ul>
-              <li
-                className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-                  activeSection === "heroSection" ? "active" : ""
-                }`}
-                data-text="Home"
-                onClick={homeClick}
+          <>
+            {/* Backdrop */}
+            <div
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "100vw",
+                height: "100vh",
+                background: "rgba(0,0,0,0.6)",
+                zIndex: 999,
+              }}
+              onClick={toggleMenu}
+            />
+            {/* Dropdown Menu */}
+            <nav
+              id="dropdownMenu"
+              style={{
+                position: "fixed",
+                top: 0,
+                right: 0,
+                width: "80vw",
+                height: "100vh",
+                background: "rgba(0,2,14,0.97)",
+                zIndex: 1000,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
+                padding: "2rem 1.5rem 1.5rem 1.5rem",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.2)",
+              }}
+            >
+              {/* Close Button */}
+              <button
+                onClick={toggleMenu}
+                style={{
+                  alignSelf: "flex-end",
+                  background: "none",
+                  border: "none",
+                  fontSize: "2rem",
+                  color: "#00d4ff",
+                  marginBottom: "2rem",
+                  cursor: "pointer",
+                }}
+                aria-label="Close menu"
               >
-                Home
-              </li>
-              <li
-                className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-                  activeSection === "resume" ? "active" : ""
-                }`}
-                data-text="Résumé"
-                onClick={resumeClick}
-              >
-                Résumé
-              </li>
-              <li
-                className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-                  activeSection === "workSection" ? "active" : ""
-                }`}
-                data-text="My Projects"
-                onClick={projectClick}
-              >
-                My Projects
-              </li>
-            </ul>
-            <div id="handles">
-              <ul>
-                <li onClick={() => handleRedirect("https://x.com/timmy_pov")}>
-                  <TW />
-                </li>
-                <li
-                  onClick={() => handleRedirect("https://github.com/Teemi2106")}
-                >
-                  <GH />
-                </li>
-                <li
-                  onClick={() =>
-                    handleRedirect(
-                      "https://www.linkedin.com/in/timi-gbenga-ba782b304"
-                    )
-                  }
-                >
-                  <LN />
-                </li>
+                <CloseIcon />
+              </button>
+              <ul style={{ listStyle: "none", padding: 0, width: "100%" }}>
+                <li className="glitch-nav" data-text="Home" onClick={homeClick}>Home</li>
+                <li className="glitch-nav" data-text="Résumé" onClick={resumeClick}>Résumé</li>
+                <li className="glitch-nav" data-text="My Projects" onClick={projectClick}>My Projects</li>
+                <li className="glitch-nav" data-text="My Services" onClick={serviceClick}>My Services</li>
+                <li className="glitch-nav" data-text="Tech Stack" onClick={stackClick}>Tech Stack</li>
+                <li className="glitch-nav" data-text="Contact Me" onClick={contactClick}>Contact Me</li>
               </ul>
-            </div>
-          </nav>
+              <div style={{ marginTop: "auto", width: "100%" }}>
+                <div style={{ display: "flex", justifyContent: "center", gap: "2rem", marginTop: "2rem" }}>
+                  <span className="icons" onClick={() => handleRedirect("https://x.com/timmy_pov")}><TW /></span>
+                  <span className="icons" onClick={() => handleRedirect("https://github.com/Teemi2106")}><GH /></span>
+                  <span className="icons" onClick={() => handleRedirect("https://www.linkedin.com/in/timi-gbenga-ba782b304")}><LN /></span>
+                </div>
+              </div>
+            </nav>
+          </>
         )}
       </div>
     </header>
