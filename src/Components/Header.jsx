@@ -104,7 +104,12 @@ const Header = () => {
     }
   };
   const resumeClick = () => {
-    navigate("/resume");
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.download = "Timi_Gbenga_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
     setMenuOpen(false);
   };
 
