@@ -94,6 +94,15 @@ const Header = () => {
       setTimeout(() => scrollToSection("techStackSection"), 400);
     }
   };
+  const contactClick = () => {
+    setMenuOpen(false);
+    if (window.location.pathname === "/") {
+      scrollToSection("mainContact");
+    } else {
+      navigate("/", { replace: false });
+      setTimeout(() => scrollToSection("mainContact"), 400);
+    }
+  };
   const resumeClick = () => {
     navigate("/resume");
     setMenuOpen(false);
@@ -184,6 +193,15 @@ const Header = () => {
             onClick={stackClick}
           >
             Tech Stack
+          </li>
+          <li
+            className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
+              activeSection === "techStackSection" ? "active" : ""
+            }`}
+            data-text="Contact Me"
+            onClick={contactClick}
+          >
+            Contact Me
           </li>
         </ul>
       </nav>

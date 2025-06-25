@@ -19,6 +19,7 @@ import { useTypewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
 import Header from "../Components/Header";
 import Contact from "../Components/Contact";
+import Footer from "./Footer";
 
 const Homepage = () => {
   const [text] = useTypewriter({
@@ -497,6 +498,7 @@ const Homepage = () => {
           </div>
         </section>
         <Contact />
+        <Footer />
       </section>
     </main>
   );
