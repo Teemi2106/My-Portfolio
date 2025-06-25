@@ -26,14 +26,14 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   z-index: 1000;
   position: fixed;
-  background-color: #00000069;
+  background-color: #000000;
 }
 
 /* #homeHeader.scrolled {
@@ -297,6 +297,8 @@ body {
   margin-left: 2rem;
   flex-shrink: 0;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  background-color: rgba(0, 0, 0, 0.486);
+  border-radius: 50%;
 }
 
 /* Base style for both front and back images */
@@ -748,7 +750,7 @@ body {
     margin: 0.5rem 0 !important;
     width: 100% !important;
     min-width: unset !important;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     z-index: 1 !important;
   }
   .techStackSun,

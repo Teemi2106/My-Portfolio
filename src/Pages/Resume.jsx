@@ -6,7 +6,7 @@ const Resume = () => {
     <div className="resume-page-container">
       <header className="resume-header">
         <h1>Timi Gbenga</h1>
-        <p>Front-End Developer | React & Node.js | Data Scientist | Python</p>
+        <p>Front-End Developer | React & Node.js | Python</p>
         <ul>
           <li>Email: gbengatimi166@gmail.com</li>
           <li>Phone: +234 704-346-4244</li>
@@ -38,16 +38,15 @@ const Resume = () => {
         <h2>Skills</h2>
         <ul>
           <li>
-            <strong>Programming Languages:</strong> JavaScript (Advanced),
-            Python (Intermediate), PHP (Intermediate)
+            <strong>Programming Languages:</strong> JavaScript, Python
+            ,TypeScript
           </li>
           <li>
-            <strong>Frameworks:</strong> React (Advanced), Node.js
-            (Intermediate), Flask (Beginner)
+            <strong>Frameworks:</strong> React ,React Native, Node.js , Flask
           </li>
           <li>
-            <strong>Tools:</strong> Git (Advanced), Firebase (Intermediate),
-            TensorFlow (Intermediate), Keras, TensorBoard, NumPy, Pandas
+            <strong>Tools:</strong> Git, Firebase, Supabase TensorFlow , Keras,
+            TensorBoard, NumPy, Pandas
           </li>
 
           <li>
@@ -64,21 +63,6 @@ const Resume = () => {
 
       <section className="resume-experience">
         <h2>Experience</h2>
-        <div className="resume-job">
-          <h3>Web Developer | TripleG | Jul 2023 - Aug 2023</h3>
-          <ul>
-            <li>
-              Spearheaded the redesign and optimization of the company website,
-              leveraging modern SEO techniques to increase online visibility and
-              drive a 20% increase in sales.
-            </li>
-            <li>
-              Architected and implemented an automated customer engagement
-              funnel, enhancing user experience and reducing customer doubt by
-              15%.
-            </li>
-          </ul>
-        </div>
 
         <div className="resume-job">
           <h3>
@@ -153,8 +137,6 @@ const Resume = () => {
           <li>Google Developer Certification - Google - 2023</li>
         </ul>
       </section>
-
- 
 
       <section className="resume-languages">
         <h2>Languages</h2>

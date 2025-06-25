@@ -151,7 +151,7 @@ const Header = () => {
         <ul className="flex items-center gap-6 justify-between text-gray-200 font-bold">
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "heroSection" ? "active-nav" : ""
+              activeSection === "heroSection" ? "active" : ""
             }`}
             data-text="Home"
             onClick={homeClick}
@@ -160,7 +160,7 @@ const Header = () => {
           </li>
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "resume" ? "active-nav" : ""
+              activeSection === "resume" ? "active" : ""
             }`}
             data-text="Résumé"
             onClick={resumeClick}
@@ -169,7 +169,7 @@ const Header = () => {
           </li>
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "workSection" ? "active-nav" : ""
+              activeSection === "workSection" ? "active" : ""
             }`}
             data-text="My Projects"
             onClick={projectClick}
@@ -178,7 +178,7 @@ const Header = () => {
           </li>
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "servicesSection" ? "active-nav" : ""
+              activeSection === "servicesSection" ? "active" : ""
             }`}
             data-text="My Services"
             onClick={serviceClick}
@@ -187,7 +187,7 @@ const Header = () => {
           </li>
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "techStackSection" ? "active-nav" : ""
+              activeSection === "techStackSection" ? "active" : ""
             }`}
             data-text="Tech Stack"
             onClick={stackClick}
@@ -196,7 +196,7 @@ const Header = () => {
           </li>
           <li
             className={`glitch-nav text-gray-200 font-bold cursor-pointer hover:text-white transition-colors ${
-              activeSection === "mainContact" ? "active-nav" : ""
+              activeSection === "techStackSection" ? "active" : ""
             }`}
             data-text="Contact Me"
             onClick={contactClick}
@@ -228,12 +228,11 @@ const Header = () => {
         </span>
       </li>
       {/* Mobile Hamburger Menu */}
-      <div
-        id="menuDiv"
-        className="md:hidden"
-        aria-label="Toggle menu"
-      >
-        <div className={`burger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
+      <div id="menuDiv" className="md:hidden" aria-label="Toggle menu">
+        <div
+          className={`burger ${menuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -289,18 +288,78 @@ const Header = () => {
                 <CloseIcon />
               </button>
               <ul style={{ listStyle: "none", padding: 0, width: "100%" }}>
-                <li className="glitch-nav" data-text="Home" onClick={homeClick}>Home</li>
-                <li className="glitch-nav" data-text="Résumé" onClick={resumeClick}>Résumé</li>
-                <li className="glitch-nav" data-text="My Projects" onClick={projectClick}>My Projects</li>
-                <li className="glitch-nav" data-text="My Services" onClick={serviceClick}>My Services</li>
-                <li className="glitch-nav" data-text="Tech Stack" onClick={stackClick}>Tech Stack</li>
-                <li className="glitch-nav" data-text="Contact Me" onClick={contactClick}>Contact Me</li>
+                <li className="glitch-nav" data-text="Home" onClick={homeClick}>
+                  Home
+                </li>
+                <li
+                  className="glitch-nav"
+                  data-text="Résumé"
+                  onClick={resumeClick}
+                >
+                  Résumé
+                </li>
+                <li
+                  className="glitch-nav"
+                  data-text="My Projects"
+                  onClick={projectClick}
+                >
+                  My Projects
+                </li>
+                <li
+                  className="glitch-nav"
+                  data-text="My Services"
+                  onClick={serviceClick}
+                >
+                  My Services
+                </li>
+                <li
+                  className="glitch-nav"
+                  data-text="Tech Stack"
+                  onClick={stackClick}
+                >
+                  Tech Stack
+                </li>
+                <li
+                  className="glitch-nav"
+                  data-text="Contact Me"
+                  onClick={contactClick}
+                >
+                  Contact Me
+                </li>
               </ul>
               <div style={{ marginTop: "auto", width: "100%" }}>
-                <div style={{ display: "flex", justifyContent: "center", gap: "2rem", marginTop: "2rem" }}>
-                  <span className="icons" onClick={() => handleRedirect("https://x.com/timmy_pov")}><TW /></span>
-                  <span className="icons" onClick={() => handleRedirect("https://github.com/Teemi2106")}><GH /></span>
-                  <span className="icons" onClick={() => handleRedirect("https://www.linkedin.com/in/timi-gbenga-ba782b304")}><LN /></span>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: "2rem",
+                    marginTop: "2rem",
+                  }}
+                >
+                  <span
+                    className="icons"
+                    onClick={() => handleRedirect("https://x.com/timmy_pov")}
+                  >
+                    <TW />
+                  </span>
+                  <span
+                    className="icons"
+                    onClick={() =>
+                      handleRedirect("https://github.com/Teemi2106")
+                    }
+                  >
+                    <GH />
+                  </span>
+                  <span
+                    className="icons"
+                    onClick={() =>
+                      handleRedirect(
+                        "https://www.linkedin.com/in/timi-gbenga-ba782b304"
+                      )
+                    }
+                  >
+                    <LN />
+                  </span>
                 </div>
               </div>
             </nav>

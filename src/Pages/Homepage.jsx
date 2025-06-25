@@ -69,8 +69,9 @@ const Homepage = () => {
     canvas.width = window.innerWidth;
     canvas.height = document.getElementById("heroSection")?.offsetHeight || 600;
 
+    const rainWord = "devteemi";
     const fontSize = 16;
-    const columns = canvas.width / fontSize;
+    const columns = Math.floor(canvas.width / fontSize);
     const drops = [];
 
     for (let i = 0; i < columns; i++) {
@@ -85,7 +86,8 @@ const Homepage = () => {
       ctx.font = fontSize + "px monospace";
 
       for (let i = 0; i < drops.length; i++) {
-        const text = String.fromCharCode(65 + Math.random() * 57);
+        // Use the corresponding letter from "devteemi" for each column
+        const text = rainWord[i % rainWord.length];
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -114,7 +116,9 @@ const Homepage = () => {
   }, []);
 
   useEffect(() => {
-    if (isMobile) return; // <-- Prevent running on mobile (no canvas)
+    if (isMobile) return; // Don't run on mobile
+    if (!containerRef.current) return; // Don't run if ref is missing
+
     const animateAll = () => {
       let time = 0;
       const speedMultiplier = 0.02;
