@@ -7,7 +7,6 @@ import {
   FaTwitter as TW,
   FaGithub as GH,
   FaLinkedin as LN,
-  FaBars as MenuIcon,
   FaTimes as CloseIcon,
 } from "react-icons/fa"; // Import any icons you need
 
