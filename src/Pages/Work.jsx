@@ -19,6 +19,7 @@ import {
 import ecopack from "../Assets/ecopack.png";
 import myquest from "../Assets/myquest.png";
 import oza from "../Assets/oza.png";
+import disena from "../Assets/disena.png";
 
 // Mock data for the projects
 const projects = [
@@ -66,16 +67,16 @@ const projects = [
   },
   {
     id: 4,
-    title: "PocketPal",
-    category: "Mobile App",
+    title: "Disena Creates",
+    category: "Portfolio Website",
     description:
-      "A comprehensive personal finance management application with intelligent budgeting, expense tracking, and financial insights.",
-    image: "/api/placeholder/500/300", // Add your PocketPal screenshot
-    link: "/pocket-pal",
-    github: "#",
-    technologies: ["React Native", "Node.js", "MongoDB", "TypeScript"],
+      "A modern portfolio website for a designer, showcasing his skills, works and case studies",
+    image: disena, // Add your PocketPal screenshot
+    link: "https://disena-creates.vercel.app/",
+    github: "https://github.com/Teemi2106/disena-creates",
+    technologies: ["React", "Tailwind"],
     featured: false,
-    gradient: "from-purple-600 to-pink-600",
+    gradient: "from-yellow-600 to-orange-600",
     icon: <Smartphone className="w-6 h-6" />,
   },
   {
