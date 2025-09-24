@@ -16,8 +16,11 @@ import {
   X,
   Loader,
 } from "lucide-react";
+import ecopack from "../Assets/ecopack.png";
+import disena from "../Assets/disena.png";
+import myquest from "../Assets/myquest.png";
+import oz from "../Assets/oza.png";
 
-// Mock data for the projects
 const projects = [
   {
     id: 1,
@@ -25,7 +28,7 @@ const projects = [
     category: "Landing Page",
     description:
       "EcoPack is a sustainable packaging platform designed to help businesses find eco-friendly packaging solutions with modern design and user-friendly interface.",
-    image: "/api/placeholder/500/300", // Replace with: "../Assets/ecopack.png"
+    image: ecopack,
     link: "https://eco-pack-one.vercel.app/",
     github: "https://github.com/Moduo1/ecopack",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
@@ -39,8 +42,8 @@ const projects = [
     category: "Web Application",
     description:
       "A modern driving school platform with integrated student portal and admin panel for seamless online training and course management.",
-    image: "/api/placeholder/500/300", // Add your OZ Academy screenshot here
-    link: "#", // Add your live demo link
+    image: oz,
+    link: "https://v0-ozimzim-driving-academy-gjg3.vercel.app/",
     github: "#", // Add your GitHub link
     technologies: ["Next.js", "Supabase", "Tailwind CSS", "PostgreSQL"],
     featured: true,
@@ -53,26 +56,26 @@ const projects = [
     category: "Mobile App",
     description:
       "A comprehensive examination platform for students to practice different subjects and assess their performance in simulated real exam conditions.",
-    image: "/api/placeholder/500/300", // Add your MyQuest app screenshot here
+    image: myquest, // Add your MyQuest app screenshot here
     link: "https://play.google.com/store/apps/details?id=com.teemi2106.myquest",
     github: "#",
     technologies: ["React Native", "Supabase", "PostgreSQL", "Expo"],
     featured: false,
-    gradient: "from-blue-600 to-indigo-600",
+    gradient: "from-purple-600 to-orange-600",
     icon: <Smartphone className="w-6 h-6" />,
   },
   {
     id: 4,
-    title: "PocketPal",
-    category: "Mobile App",
+    title: "Disena Creates",
+    category: "Portfolio Website",
     description:
-      "A comprehensive personal finance management application with intelligent budgeting, expense tracking, and financial insights.",
-    image: "/api/placeholder/500/300", // Add your PocketPal screenshot
-    link: "/pocket-pal",
+      " A sleek portfolio website for a creative designer, showcasing projects, skills, and services with a focus on modern aesthetics and usability.",
+    image: disena,
+    link: "https://disena-creates.vercel.app/",
     github: "#",
-    technologies: ["React Native", "Node.js", "MongoDB", "TypeScript"],
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
     featured: false,
-    gradient: "from-purple-600 to-pink-600",
+    gradient: "from-yellow-600 to-orange-600",
     icon: <Smartphone className="w-6 h-6" />,
   },
   {
