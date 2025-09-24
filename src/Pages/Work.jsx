@@ -353,7 +353,7 @@ const Contact = () => {
                 {
                   icon: <MapPin className="w-6 h-6" />,
                   label: "Location",
-                  value: "Kano, Nigeria",
+                  value: "Lagos, Nigeria",
                   gradient: "from-purple-500 to-pink-500",
                 },
               ].map((item, index) => (
