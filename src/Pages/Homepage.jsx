@@ -20,6 +20,8 @@ import {
   Eye,
   Zap,
 } from "lucide-react";
+
+import profile from "../Assets/pic-removebg-preview.png";
 import TechStack3D from "../Components/TechStack3d";
 
 const services = [
@@ -207,7 +209,7 @@ const RainCanvas = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 pointer-events-none"
-      style={{ zIndex: 1, opacity: 0.6 }}
+      style={{ zIndex: 1, opacity: 0.4 }}
     />
   );
 };
@@ -289,7 +291,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="px-8 py-20 border-t border-gray-800/50">
+    <section
+      id="mainContact"
+      className="px-8 py-20 border-t border-gray-800/50"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
@@ -360,7 +365,7 @@ const Contact = () => {
                 {
                   icon: <MapPin className="w-6 h-6" />,
                   label: "Location",
-                  value: "Lagos, Nigeria",
+                  value: "Kano, Nigeria",
                   gradient: "from-purple-500 to-pink-500",
                 },
               ].map((item, index) => (
@@ -551,37 +556,13 @@ const Homepage = () => {
       </div>
 
       <div className="relative z-10">
-        {/* Header */}
-        <header className="px-8 py-6">
-          <nav className="max-w-7xl mx-auto flex justify-between items-center">
-            <div className="text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-              DevTeemi
-            </div>
-            <div className="flex space-x-8">
-              <a
-                href="#services"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-              >
-                Services
-              </a>
-              <a
-                href="#expertise"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-              >
-                Expertise
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-              >
-                Contact
-              </a>
-            </div>
-          </nav>
-        </header>
+        {/* Use your existing Header component */}
 
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-between px-8 py-20">
+        <section
+          id="heroSection"
+          className="relative min-h-screen flex items-center justify-between px-8 py-20"
+          style={{ paddingTop: "15vmin" }}
+        >
           <RainCanvas />
 
           <div className="relative z-10 flex items-center justify-between w-full max-w-7xl mx-auto">
@@ -660,7 +641,7 @@ const Homepage = () => {
                     <div className="absolute inset-4 rounded-2xl overflow-hidden group">
                       {/* Option 1: Replace this img tag with your photo */}
                       <img
-                        src={require("../Assets/pic-removebg-preview.png")}
+                        src={profile}
                         alt="Timi Gbenga Profile"
                         className="w-full h-full object-cover rounded-2xl"
                         onError={(e) => {
@@ -709,7 +690,7 @@ const Homepage = () => {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="px-8 py-20">
+        <section id="servicesSection" className="px-8 py-20">
           <div className="max-w-7xl mx-auto">
             <AnimatedText>
               <div className="text-center mb-16">
@@ -734,7 +715,10 @@ const Homepage = () => {
         </section>
 
         {/* Tech Stack Section */}
-        <section className="px-8 py-20 border-t border-gray-800/50">
+        <section
+          id="techStackSection"
+          className="px-8 py-20 border-t border-gray-800/50"
+        >
           <div className="max-w-7xl mx-auto">
             <AnimatedText>
               <div className="text-center mb-16">
@@ -786,7 +770,10 @@ const Homepage = () => {
         </section>
 
         {/* Projects CTA Section */}
-        <section className="px-8 py-20 border-t border-gray-800/50">
+        <section
+          className="px-8 py-20 border-t border-gray-800/50"
+          id="workSection"
+        >
           <div className="max-w-4xl mx-auto">
             <AnimatedText>
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-gray-800 p-12 text-center">
@@ -848,7 +835,7 @@ const Homepage = () => {
                 <Phone className="w-6 h-6" />
               </a>
               <a
-                href="https://github.com/Teemi2106"
+                href="https://www.github.com/Teemi2106"
                 className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <Github className="w-6 h-6" />

@@ -16,10 +16,6 @@ import {
   X,
   Loader,
 } from "lucide-react";
-import ecopack from "../Assets/ecopack.png";
-import myquest from "../Assets/myquest.png";
-import oza from "../Assets/oza.png";
-import disena from "../Assets/disena.png";
 
 // Mock data for the projects
 const projects = [
@@ -29,7 +25,7 @@ const projects = [
     category: "Landing Page",
     description:
       "EcoPack is a sustainable packaging platform designed to help businesses find eco-friendly packaging solutions with modern design and user-friendly interface.",
-    image: ecopack,
+    image: "/api/placeholder/500/300", // Replace with: "../Assets/ecopack.png"
     link: "https://eco-pack-one.vercel.app/",
     github: "https://github.com/Moduo1/ecopack",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
@@ -43,8 +39,8 @@ const projects = [
     category: "Web Application",
     description:
       "A modern driving school platform with integrated student portal and admin panel for seamless online training and course management.",
-    image: oza, // Add your OZ Academy screenshot here
-    link: "https://v0-ozimzim-driving-academy-gjg3.vercel.app/", // Add your live demo link
+    image: "/api/placeholder/500/300", // Add your OZ Academy screenshot here
+    link: "#", // Add your live demo link
     github: "#", // Add your GitHub link
     technologies: ["Next.js", "Supabase", "Tailwind CSS", "PostgreSQL"],
     featured: true,
@@ -54,29 +50,29 @@ const projects = [
   {
     id: 3,
     title: "MyQuest",
-    category: "Mobile Application",
+    category: "Mobile App",
     description:
       "A comprehensive examination platform for students to practice different subjects and assess their performance in simulated real exam conditions.",
-    image: myquest,
+    image: "/api/placeholder/500/300", // Add your MyQuest app screenshot here
     link: "https://play.google.com/store/apps/details?id=com.teemi2106.myquest",
     github: "#",
     technologies: ["React Native", "Supabase", "PostgreSQL", "Expo"],
     featured: false,
-    gradient: "from-blue-600 to-orange-600",
+    gradient: "from-blue-600 to-indigo-600",
     icon: <Smartphone className="w-6 h-6" />,
   },
   {
     id: 4,
-    title: "Disena Creates",
-    category: "Portfolio Website",
+    title: "PocketPal",
+    category: "Mobile App",
     description:
-      "A modern portfolio website for a designer, showcasing his skills, works and case studies",
-    image: disena, // Add your PocketPal screenshot
-    link: "https://disena-creates.vercel.app/",
-    github: "https://github.com/Teemi2106/disena-creates",
-    technologies: ["React", "Tailwind"],
+      "A comprehensive personal finance management application with intelligent budgeting, expense tracking, and financial insights.",
+    image: "/api/placeholder/500/300", // Add your PocketPal screenshot
+    link: "/pocket-pal",
+    github: "#",
+    technologies: ["React Native", "Node.js", "MongoDB", "TypeScript"],
     featured: false,
-    gradient: "from-yellow-600 to-orange-600",
+    gradient: "from-purple-600 to-pink-600",
     icon: <Smartphone className="w-6 h-6" />,
   },
   {
@@ -354,7 +350,7 @@ const Contact = () => {
                 {
                   icon: <MapPin className="w-6 h-6" />,
                   label: "Location",
-                  value: "Lagos, Nigeria",
+                  value: "Kano, Nigeria",
                   gradient: "from-purple-500 to-pink-500",
                 },
               ].map((item, index) => (
@@ -545,33 +541,6 @@ const Work = () => {
       </div>
 
       <div className="relative z-10">
-        {/* Header */}
-        <header className="px-8 py-6">
-          <nav className="max-w-7xl mx-auto flex justify-between items-center">
-            <AnimatedText>
-              <div className="text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                Portfolio
-              </div>
-            </AnimatedText>
-            <AnimatedText delay={200}>
-              <div className="flex space-x-8">
-                <a
-                  href="#projects"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Projects
-                </a>
-                <a
-                  href="#contact"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Contact
-                </a>
-              </div>
-            </AnimatedText>
-          </nav>
-        </header>
-
         {/* Hero Section */}
         <section className="px-8 py-20 text-center">
           <div className="max-w-4xl mx-auto">

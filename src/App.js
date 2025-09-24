@@ -5,10 +5,12 @@ import Work from "./Pages/Work";
 import PocketPal from "./WorkPages/PocketPal";
 import PerfectRecipe from "./WorkPages/PerfectRecipe";
 import Resume from "./Pages/Resume";
+import Header from "./Components/Header";
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/projects" element={<Work />} />
