@@ -2,6 +2,8 @@
 import React, { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
+import customImage from "../Assets/base_basic_pbr.glb";
 
 const techStack = [
   {
@@ -42,6 +44,12 @@ const techStack = [
     color: "#ff6f00",
     gradient: "from-orange-600 to-red-600",
   },
+  {
+    name: "Next.js",
+    color: "#bbb7b7ff",
+    gradient: "from-white to-gray-300",
+  },
+  { name: "Git", color: "#ffffffff", gradient: "from-red-400 to-red-600" },
 ];
 const OrbitingBall = ({ tech, index, total }) => {
   const ref = useRef();
@@ -81,30 +89,19 @@ const OrbitingBall = ({ tech, index, total }) => {
   );
 };
 
-const Sun = () => {
-  const sunRef = useRef();
+const CustomModel = () => {
+  const { scene } = useGLTF(customImage); // file in public/models
+  const ref = useRef();
 
   return (
-    <mesh ref={sunRef} castShadow>
-      {/* Sun Ball */}
-      <sphereGeometry args={[2, 64, 64]} />
-      <meshStandardMaterial
-        emissive="#ff9800"
-        emissiveIntensity={2.5}
-        color="#ffcc80"
-        roughness={0.3}
-        metalness={0.7}
-      />
-
-      {/* Point light inside the Sun (radiates light in all directions) */}
-      <pointLight
-        intensity={2}
-        distance={30}
-        decay={2}
-        color="#ffdd55"
-        castShadow
-      />
-    </mesh>
+    <primitive
+      ref={ref}
+      object={scene}
+      scale={5} // adjust size
+      position={[0, -1, 0]} // adjust placement
+      castShadow
+      receiveShadow
+    />
   );
 };
 
@@ -129,7 +126,7 @@ const TechStack3D = () => {
         />
 
         {/* The glowing Sun with its own point light */}
-        <Sun />
+        <CustomModel />
 
         {/* Orbiting balls */}
         {techStack.map((tech, i) => (

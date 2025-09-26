@@ -23,6 +23,7 @@ import {
 
 import profile from "../Assets/pic-removebg-preview.png";
 import TechStack3D from "../Components/TechStack3d";
+import TechStackMobile from "../Components/TechStackMobile";
 
 const services = [
   {
@@ -735,12 +736,23 @@ const Homepage = () => {
             <AnimatedText delay={200}>
               <div className="relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-800">
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl" />
-                <TechStack3D />
+
+                {/* Responsive Tech Stack Display */}
+                <div className="relative z-10">
+                  {/* Mobile: 3D Cards */}
+                  <div className="lg:hidden">
+                    <TechStackMobile AnimatedText={AnimatedText} />
+                  </div>
+
+                  {/* Desktop: 3D Scene */}
+                  <div className="hidden lg:block">
+                    <TechStack3D />
+                  </div>
+                </div>
               </div>
             </AnimatedText>
           </div>
         </section>
-
         {/* Expertise Section */}
         <section
           id="expertise"
