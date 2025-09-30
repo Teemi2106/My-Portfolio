@@ -192,12 +192,12 @@ const Header = () => {
     <>
       {/* Header */}
       <header
-        className={`fixed top-0 left-0 w-full z-[2000] transition-all duration-500 ${
+        className={`fixed top-0 left-0 w-full z-[999999] transition-all duration-500 ${
           scrolled
             ? "bg-black/80 backdrop-blur-xl border-b border-gray-800/50"
             : "bg-transparent"
         }`}
-        style={{ zIndex: 9999 }}
+        style={{ zIndex: 9999999 }}
       >
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -296,12 +296,12 @@ const Header = () => {
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[1998] lg:hidden"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[999999] lg:hidden"
             onClick={toggleMenu}
           />
 
           {/* Menu Panel */}
-          <div className="fixed top-0 right-0 w-80 h-full bg-black/95 backdrop-blur-xl border-l border-gray-800/50 z-[1999] lg:hidden">
+          <div className="fixed top-0 right-0 w-80 h-full bg-black/95 backdrop-blur-xl border-l border-gray-800/50 z-[999999] lg:hidden">
             <div className="flex flex-col h-full p-6">
               {/* Close Button */}
               <div className="flex justify-end mb-8">
@@ -315,7 +315,7 @@ const Header = () => {
               </div>
 
               {/* Navigation Items */}
-              <nav className="flex-1">
+              <nav className="flex-1 z-[999999]">
                 <ul className="space-y-2">
                   {navItems.map((item) => (
                     <li key={item.name}>

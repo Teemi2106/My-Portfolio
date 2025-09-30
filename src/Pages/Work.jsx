@@ -20,6 +20,7 @@ import ecopack from "../Assets/ecopack.png";
 import disena from "../Assets/disena.png";
 import myquest from "../Assets/myquest.png";
 import oz from "../Assets/oza.png";
+import toro from "../Assets/toro.png";
 
 const projects = [
   {
@@ -80,30 +81,16 @@ const projects = [
   },
   {
     id: 5,
-    title: "PerfectRecipe",
-    category: "Web Application",
-    description:
-      "An intelligent recipe discovery platform featuring AI-powered recommendations, nutritional analysis, and a vibrant community.",
-    image: "/api/placeholder/500/300", // Add your PerfectRecipe screenshot
-    link: "https://perfect-recipe-three.vercel.app/",
-    github: "#",
-    technologies: ["React", "Firebase", "Tailwind CSS", "API Integration"],
-    featured: false,
-    gradient: "from-emerald-600 to-teal-600",
-    icon: <Globe className="w-6 h-6" />,
-  },
-  {
-    id: 6,
-    title: "Happy Blogger",
+    title: "Toro Daily",
     category: "Content Platform",
     description:
       "A modern blogging platform designed for creative writers, featuring rich text editing, social interactions, and content management.",
-    image: "/api/placeholder/500/300", // Add your Happy Blogger screenshot
-    link: "https://happy-blogger.vercel.app/",
+    image: toro,
+    link: "https://toro-daily-post.vercel.app/",
     github: "#",
-    technologies: ["React", "Next.js", "Prisma", "PostgreSQL"],
-    featured: false,
-    gradient: "from-blue-600 to-indigo-600",
+    technologies: ["ReactJS", "PostgreSQL", "Tailwind CSS", "Supabase"],
+    featured: true,
+    gradient: "from-blue-300 to-purple-600",
     icon: <Globe className="w-6 h-6" />,
   },
 ];
